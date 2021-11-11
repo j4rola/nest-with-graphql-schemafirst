@@ -9,7 +9,8 @@ import { LaunchModule } from './launch/launch.module';
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      typePaths: ['./**/*.graphql'],
+      typePaths: ['./**/*.graphql'],       /*  'typePaths' is telling the graphql module where to look for schemas. 
+                                           In this case we are telling it to look inside all '.graphql' files.    */
       definitions: {
         path: join(process.cwd(), 'src/graphql.ts'),     
       },
